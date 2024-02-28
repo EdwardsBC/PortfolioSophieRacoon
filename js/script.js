@@ -24,53 +24,38 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    function agregarFuncionalidadZoom(imgElement) {
+        imgElement.addEventListener('click', function(event) {
+            var imgFullscreen = document.createElement('img');
+            imgFullscreen.src = imgElement.src;
+            imgFullscreen.alt = imgElement.alt;
+
+            imgFullscreen.style.position = 'fixed';
+            imgFullscreen.style.top = '0';
+            imgFullscreen.style.left = '0';
+            imgFullscreen.style.width = '100%';
+            imgFullscreen.style.height = '100%';
+            imgFullscreen.style.objectFit = 'contain';
+            imgFullscreen.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            imgFullscreen.style.zIndex = '9999';
+            imgFullscreen.style.cursor = 'zoom-out';
+
+            document.body.appendChild(imgFullscreen);
+
+            imgFullscreen.addEventListener('click', function() {
+                document.body.removeChild(imgFullscreen);
+            });
+        });
+    }
+
     var imagenes = document.querySelectorAll('.imagen-container img');
     imagenes.forEach(function(imagen) {
-        imagen.addEventListener('click', function(event) {
-            var imgFullscreen = document.createElement('img');
-            imgFullscreen.src = imagen.src;
-            imgFullscreen.alt = imagen.alt;
-
-            imgFullscreen.style.position = 'fixed';
-            imgFullscreen.style.top = '0';
-            imgFullscreen.style.left = '0';
-            imgFullscreen.style.width = '100%';
-            imgFullscreen.style.height = '100%';
-            imgFullscreen.style.objectFit = 'contain';
-            imgFullscreen.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-            imgFullscreen.style.zIndex = '9999';
-            imgFullscreen.style.cursor = 'zoom-out';
-
-            document.body.appendChild(imgFullscreen);
-
-            imgFullscreen.addEventListener('click', function() {
-                document.body.removeChild(imgFullscreen);
-            });
-        });
+        agregarFuncionalidadZoom(imagen);
     });
 
-    var imagenes = document.querySelectorAll('.imagen-container-horizontal img');
-    imagenes.forEach(function(imagen) {
-        imagen.addEventListener('click', function(event) {
-            var imgFullscreen = document.createElement('img');
-            imgFullscreen.src = imagen.src;
-            imgFullscreen.alt = imagen.alt;
-
-            imgFullscreen.style.position = 'fixed';
-            imgFullscreen.style.top = '0';
-            imgFullscreen.style.left = '0';
-            imgFullscreen.style.width = '100%';
-            imgFullscreen.style.height = '100%';
-            imgFullscreen.style.objectFit = 'contain';
-            imgFullscreen.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-            imgFullscreen.style.zIndex = '9999';
-            imgFullscreen.style.cursor = 'zoom-out';
-
-            document.body.appendChild(imgFullscreen);
-
-            imgFullscreen.addEventListener('click', function() {
-                document.body.removeChild(imgFullscreen);
-            });
-        });
+    var imagenesHorizontales = document.querySelectorAll('.imagen-container-horizontal img');
+    imagenesHorizontales.forEach(function(imagenHorizontal) {
+        agregarFuncionalidadZoom(imagenHorizontal);
     });
+
 });
