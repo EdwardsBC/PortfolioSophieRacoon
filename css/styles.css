@@ -1,3 +1,4 @@
+/* Estilos base */
 body, html {
     margin: 0;
     padding: 0;
@@ -91,14 +92,12 @@ a {
     flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben en una sola fila */
     justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor con espacio entre ellos */
     gap: 20px; /* Espacio entre los contenedores de imágenes */
-
 }
 
 .contenedor-imagenes {
     width: 100%; /* Ancho del contenedor */
     max-width: 900px; /* Ancho máximo del contenedor en píxeles */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
-    
 }
 
 .contenedor-imagenes > div {
@@ -126,7 +125,6 @@ a {
     display: flex; /* Establece el contenedor como un flex container */
     justify-content: center; /* Distribuye los elementos a lo largo del contenedor con espacio entre ellos */
     margin-bottom: 20px; /* Margen inferior para separación */
-
 }
 
 .imagen-container-horizontal {
@@ -184,4 +182,32 @@ footer {
 
 .contenedor-imagenes > div {
     flex-basis: 48%; /* Establece el ancho máximo de cada div al 48% del contenedor */
+}
+
+/* Media query para hacer la página responsiva */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        flex-direction: row; /* Cambia la dirección del flujo de columnas a filas */
+        justify-content: space-around; /* Distribuye los elementos horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        position: static; /* Cambia la posición del navbar a estática para que no esté fijo en la parte superior */
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Organiza los elementos en una fila */
+    }
+
+    .navbar li {
+        margin: 0 10px; /* Añade un margen a los elementos de la lista */
+    }
+
+    .content {
+        margin: auto; /* Centra el contenido horizontalmente */
+        margin-top: 80px; /* Agrega un espacio superior para compensar la altura del navbar */
+    }
+
+    .container {
+        padding-top: 80px; /* Añade espacio superior al contenedor */
+    }
 }
