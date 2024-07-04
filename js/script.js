@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     var tabs = document.querySelectorAll('.navbar ul li a');
+    var menuToggle = document.querySelector('.menu-toggle');
+    var menu = document.querySelector('.menu');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('show');
+    });
 
     tabs.forEach(function(tab) {
         tab.addEventListener('click', function(event) {
@@ -37,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             imgFullscreen.style.height = '100%';
             imgFullscreen.style.objectFit = 'contain';
             imgFullscreen.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-            imgFullscreen.style.zIndex = '9999';
+            imgFullscreen.style.zIndex = '1000';
             imgFullscreen.style.cursor = 'zoom-out';
 
             document.body.appendChild(imgFullscreen);
@@ -48,14 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    var imagenes = document.querySelectorAll('.imagen-container img');
-    imagenes.forEach(function(imagen) {
-        agregarFuncionalidadZoom(imagen);
+    var imagenes = document.querySelectorAll('.imagen-container img, .imagen-container-horizontal img');
+    imagenes.forEach(function(img) {
+        agregarFuncionalidadZoom(img);
     });
-
-    var imagenesHorizontales = document.querySelectorAll('.imagen-container-horizontal img');
-    imagenesHorizontales.forEach(function(imagenHorizontal) {
-        agregarFuncionalidadZoom(imagenHorizontal);
-    });
-
 });
