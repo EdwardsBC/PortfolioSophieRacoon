@@ -16,8 +16,8 @@ html, body {
 }
 
 /* --------------------------
- NAVBAR (Vista de escritorio)
- -------------------------- */
+   NAVBAR (Vista de escritorio)
+   -------------------------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -91,8 +91,8 @@ ul.menu li a {
 }
 
 /* --------------------------
- CONTENIDO PRINCIPAL
- -------------------------- */
+   CONTENIDO PRINCIPAL
+   -------------------------- */
 .content {
   margin-left: 300px; /* Deja espacio para la barra lateral en escritorio */
   padding: 20px;
@@ -212,8 +212,8 @@ footer {
 }
 
 /* ------------------------------
- RESPONSIVE (menor a 768px)
- ------------------------------ */
+   RESPONSIVE (menor a 768px)
+   ------------------------------ */
 @media only screen and (max-width: 768px) {
 
   /* Pasa la navbar arriba en columna */
@@ -243,7 +243,7 @@ footer {
     height: auto;
   }
 
-  /* Menú en fila pequeña */
+  /* Menú en fila con letras más grandes */
   ul.menu {
     flex-direction: row;
     gap: 10px;
@@ -254,9 +254,9 @@ footer {
     margin-bottom: 0;
   }
 
-  /* Texto del menú más pequeño */
+  /* Ajusta el tamaño de las letras del menú en modo responsivo */
   ul.menu li a {
-    font-size: 16px; /* Ajusta a tu gusto */
+    font-size: 18px; /* Aquí se agranda la letra en móvil */
   }
 
   /* Redes sociales debajo del menú */
