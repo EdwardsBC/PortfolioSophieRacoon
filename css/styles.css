@@ -1,309 +1,313 @@
 /* Estilos base */
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Pangolin', sans-serif;
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Pangolin', sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding-bottom: 100px;
-    max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  max-width: 100%;
 }
 
-/* ----- NAVBAR (Vista de escritorio) ----- */
+/* --------------------------
+ NAVBAR (Vista de escritorio)
+ -------------------------- */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column; /* Columna en escritorio */
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Columna en escritorio */
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 }
 
 /* LOGO */
 .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .logo img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 /* Título principal en la barra lateral (escritorio) */
 .site-title {
-    color: #B33C52;
-    font-size: 40px;
-    margin-top: 20px;
-    text-align: center;
+  color: #B33C52;
+  font-size: 40px;
+  margin-top: 20px;
+  text-align: center;
 }
 
-/* ----- MENÚ LATERAL ESCRITORIO ----- */
+/* Menú en columna (escritorio) */
 ul.menu {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-    text-align: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 ul.menu li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 ul.menu li a {
-    color: black;
-    text-decoration: none;
-    font-size: 24px;
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
 }
 
 /* Redes sociales en la barra lateral (escritorio) */
 .social-links {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
 }
 
 .social-links a img {
-    width: 35px; /* un poco más pequeño que 40px */
-    height: auto;
+  width: 35px; /* un poco más pequeño que 40px */
+  height: auto;
 }
 
-/* ----- CONTENIDO PRINCIPAL (ESCRITORIO) ----- */
+/* --------------------------
+ CONTENIDO PRINCIPAL
+ -------------------------- */
 .content {
-    margin-left: 300px; /* Empuja para no tapar el navbar */
-    padding: 20px;
-    width: auto;
+  margin-left: 300px; /* Deja espacio para la barra lateral en escritorio */
+  padding: 20px;
+  width: auto;
 }
 
 /* Títulos dentro del contenido */
 h1 {
-    color: #B33C52;
-    font-size: 40px;
-    margin-top: 20px;
-    margin-left: 15%;
+  color: #B33C52;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-left: 15%;
 }
 
 h2 {
-    color: #beb7b7;
-    font-size: 20px;
-    margin-top: 40px;
-    margin-left: 15%;
+  color: #beb7b7;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-left: 15%;
 }
 
 /* Contenedores de imágenes */
 .contenedor-general-imagenes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-
-    /* Margen para que no quede muy pegado a los bordes en móviles */
-    margin: 0 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 10px; /* Margen para móviles */
 }
 
 .contenedor-imagenes {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .contenedor-imagenes > div {
-    flex-basis: calc(50% - 10px);
-    margin-top: 0;
-    border-radius: 50px;
+  flex-basis: calc(50% - 10px);
+  margin-top: 0;
+  border-radius: 50px;
 }
 
 /* Ajuste de imágenes */
 .imagen-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 500px;
-    margin: 10px; /* Margen extra para que se vea aireado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  margin: 10px; /* Margen extra para que se vea aireado */
 }
 
 .imagen-container img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 30px;
-    box-shadow: 5px 5px 10px #C2C2D5;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px #C2C2D5;
 }
 
 .contenedor-imagenes-horizontal {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .imagen-container-horizontal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    max-width: 100%;
-    border-radius: 15px;
-    margin: 10px; /* Margen extra */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  max-width: 100%;
+  border-radius: 15px;
+  margin: 10px; /* Margen extra */
 }
 
 .imagen-container-horizontal img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 30px;
-    box-shadow: 5px 5px 10px #C2C2D5;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px #C2C2D5;
 }
 
 .video-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  max-width: 100%;
 }
 
 .pdf-container {
-    margin-left: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 70%;
-    height: 80vh;
-    max-width: 100%;
-    border-radius: 15px;
-    background-color: #B33C52;
+  margin-left: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+  height: 80vh;
+  max-width: 100%;
+  border-radius: 15px;
+  background-color: #B33C52;
 }
 
 .pdf-container embed {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* Footer */
 footer {
-    width: 100%;
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: auto;
+  width: 100%;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
 }
 
-/* ----- RESPONSIVE (menor a 768px) ----- */
+/* ------------------------------
+ RESPONSIVE (menor a 768px)
+ ------------------------------ */
 @media only screen and (max-width: 768px) {
 
-    /* La navbar ahora en columna (para que menú y redes queden uno debajo de otro) */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: column; /* <= CAMBIO CLAVE */
-      align-items: center;
-      justify-content: center;
-      padding: 10px 0; /* Ajusta si quieres más/menos padding */
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      z-index: 9999;
-    }
+  /* Pasa la navbar arriba en columna */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 9999;
+  }
 
-    /* Ocultar "Sophie Racoon" en móvil */
-    .site-title {
-      display: none;
-    }
+  /* Ocultar "Sophie Racoon" en móvil */
+  .site-title {
+    display: none;
+  }
 
-    /* Logo más pequeño */
-    .logo img {
-      width: 50px; 
-      height: auto;
-    }
+  /* Logo más pequeño */
+  .logo img {
+    width: 50px; 
+    height: auto;
+  }
 
-    /* Menú en fila pequeña */
-    ul.menu {
-      flex-direction: row;
-      gap: 10px;
-      margin: 10px 0;
-    }
+  /* Menú en fila pequeña */
+  ul.menu {
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px 0;
+  }
 
-    ul.menu li {
-      margin-bottom: 0;
-    }
+  ul.menu li {
+    margin-bottom: 0;
+  }
 
-    /* Texto del menú más pequeño */
-    ul.menu li a {
-      font-size: 12px; /* Ajusta según tu preferencia */
-    }
+  /* Texto del menú más pequeño */
+  ul.menu li a {
+    font-size: 16px; /* Ajusta a tu gusto */
+  }
 
-    /* Redes sociales debajo del menú (van al final en columna) */
-    .social-links {
-      flex-direction: row;
-      gap: 10px;
-      margin-top: 10px; /* Espacio extra arriba */
-      margin-bottom: 10px;
-    }
+  /* Redes sociales debajo del menú */
+  .social-links {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
-    .social-links a img {
-      width: 30px;
-      margin-right: 5px;
-    }
+  .social-links a img {
+    width: 30px;
+    margin-right: 5px;
+  }
 
-    /* Ajustes del contenido al mover la navbar arriba */
-    .content {
-      margin-left: 0;
-      margin-top: 120px; /* más grande si la navbar es más alta */
-      padding: 10px;
-      width: auto;
-    }
+  /* Aumentamos margin-top para que el contenido no se oculte tras la navbar */
+  .content {
+    margin-left: 0;         /* Sin barra lateral fija */
+    margin-top: 150px;      /* Ajusta si quieres más/menos espacio */
+    padding: 10px;
+    width: auto;
+  }
 
-    .contenedor-general-imagenes {
-      margin: 10px;
-      flex-direction: column;
-      align-items: center;
-    }
+  .contenedor-general-imagenes {
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .contenedor-imagenes {
-      flex-direction: column;
-      align-items: center;
-    }
+  .contenedor-imagenes {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .contenedor-imagenes > div {
-      flex-basis: 100%;
-      margin-bottom: 20px;
-    }
+  .contenedor-imagenes > div {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
 
-    .imagen-container {
-      height: auto;
-      margin: 10px 0;
-    }
+  .imagen-container {
+    height: auto;
+    margin: 10px 0;
+  }
 
-    h1, h2 {
-      text-align: center;
-      margin-left: 0;
-    }
+  h1, h2 {
+    text-align: center;
+    margin-left: 0;
+  }
 
-    .pdf-container {
-      margin-left: 0;
-      width: 100%;
-    }
+  .pdf-container {
+    margin-left: 0;
+    width: 100%;
+  }
 }
