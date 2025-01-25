@@ -23,7 +23,7 @@ html, body {
     width: 300px;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Columna en escritorio */
     align-items: center;
     padding: 20px;
     background-color: #fff;
@@ -58,7 +58,6 @@ ul.menu {
     margin-top: 20px;
     text-align: center;
 
-    /* En escritorio, lo mostramos en columna */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,7 +211,8 @@ footer {
 
 /* ----- RESPONSIVE (menor a 768px) ----- */
 @media only screen and (max-width: 768px) {
-    /* La navbar pasa arriba, pequeña */
+
+    /* La navbar ahora en columna (para que menú y redes queden uno debajo de otro) */
     .navbar {
       position: fixed;
       top: 0;
@@ -220,10 +220,10 @@ footer {
       width: 100%;
       height: auto;
       display: flex;
-      flex-direction: row;
+      flex-direction: column; /* <= CAMBIO CLAVE */
       align-items: center;
-      justify-content: flex-start;
-      padding: 10px 20px;
+      justify-content: center;
+      padding: 10px 0; /* Ajusta si quieres más/menos padding */
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       z-index: 9999;
     }
@@ -233,39 +233,45 @@ footer {
       display: none;
     }
 
+    /* Logo más pequeño */
     .logo img {
       width: 50px; 
       height: auto;
     }
 
-    /* Menú en fila pequeña, a la derecha */
+    /* Menú en fila pequeña */
     ul.menu {
       flex-direction: row;
-      margin: 0 10px;
       gap: 10px;
+      margin: 10px 0;
     }
 
     ul.menu li {
       margin-bottom: 0;
     }
 
+    /* Texto del menú más pequeño */
     ul.menu li a {
-      font-size: 10px; 
+      font-size: 12px; /* Ajusta según tu preferencia */
     }
 
+    /* Redes sociales debajo del menú (van al final en columna) */
     .social-links {
-      margin-left: auto; 
-      margin-right: 20px; /* Añadimos margen adicional a la derecha */
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 10px; /* Espacio extra arriba */
+      margin-bottom: 10px;
     }
 
     .social-links a img {
       width: 30px;
-      margin-right: 5px; /* Pequeño espacio entre íconos */
+      margin-right: 5px;
     }
 
+    /* Ajustes del contenido al mover la navbar arriba */
     .content {
       margin-left: 0;
-      margin-top: 80px;
+      margin-top: 120px; /* más grande si la navbar es más alta */
       padding: 10px;
       width: auto;
     }
