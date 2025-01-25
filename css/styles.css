@@ -275,7 +275,7 @@ footer {
   /* Aumentamos margin-top para que el contenido no se oculte tras la navbar */
   .content {
     margin-left: 0;         /* Sin barra lateral fija */
-    margin-top: 150px;      /* Ajusta si quieres más/menos espacio */
+    margin-top: 200px;      /* Ajusta si quieres más/menos espacio */
     padding: 10px;
     width: auto;
   }
